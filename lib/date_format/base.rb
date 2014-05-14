@@ -1,6 +1,6 @@
 module DateFormat
     
-  def self.format_one(element, format_type)
+  def self.change_to(element, format_type)
     begin
       unless element.nil? || element == ""
         element.strftime(choose_date_format(format_type))

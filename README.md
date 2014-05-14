@@ -22,11 +22,11 @@ Try this snippet of code on ruby irb
 
     require 'date_format'
     today_time = Time.now
-    puts DateFormat.format_one(today_time, "GENERAL_DATE")                  
-    puts DateFormat.format_one(today_time, "LONG_DATE")
-    puts DateFormat.format_one(today_time, "ISO_8601_FORMAT")
-    puts DateFormat.format_one(today_time, "")
-    puts DateFormat.format_one("", "")
+    puts DateFormat.change_to(today_time, "GENERAL_DATE")                  
+    puts DateFormat.change_to(today_time, "LONG_DATE")
+    puts DateFormat.change_to(today_time, "ISO_8601_FORMAT")
+    puts DateFormat.change_to(today_time, "")
+    puts DateFormat.change_to("", "")
 
 
 
