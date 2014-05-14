@@ -1,6 +1,6 @@
 # DateFormat
 
-TODO: Write a gem description
+DateFormat is the gem used to access formatted datetime.
 
 ## Installation
 
@@ -18,7 +18,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Try this snippet of code on ruby irb
+
+    require 'date_format'
+    today_time = Time.now
+    puts DateFormat.format_one(today_time, "GENERAL_DATE")                  
+    puts DateFormat.format_one(today_time, "LONG_DATE")
+    puts DateFormat.format_one(today_time, "ISO_8601_FORMAT")
+    puts DateFormat.format_one(today_time, "")
+    puts DateFormat.format_one("", "")
+
+
 
 ## Contributing
 
