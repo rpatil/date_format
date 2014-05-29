@@ -5,7 +5,7 @@ require 'date_format/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "date_format"
-  spec.version       = "0.0.1"
+  spec.version       = "0.1.0"
   spec.authors       = ["Rahul Patil"]
   spec.email         = ["rahupatil_scs@yahoo.co.in"]
   spec.summary       = %q{Date Format}

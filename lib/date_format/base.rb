@@ -44,6 +44,39 @@ module DateFormat
         "%M"
       else
         "%d.%m.%y"
-      end
-   end  
+    end
+  end
+  
+  
+  def self.day_difference(start_date, end_date)
+    formatted_time = ""  
+    end_date = Time.now if end_date == 'PRESENT_DAY'
+    time_difference_in_second = (end_date - start_date).to_i
+    rest, seconds = time_difference_in_second.divmod( 60 )
+    rest, minutes = rest.divmod( 60 )
+    days, hours = rest.divmod( 24 )    
+    
+    if days > 0
+      tag = (days < 2) ? "day" : "days"
+      formatted_time += "#{days} #{tag} "
+    end
+    
+    if hours > 0
+      tag = (hours < 2) ? "hour" : "hours"
+      formatted_time += "#{hours} #{tag} "
+    end
+    
+    if minutes > 0
+      tag = (minutes < 2) ? "minute" : "minutes"
+      formatted_time += "#{minutes} #{tag} "
+    end
+ 
+    if seconds > 0
+      tag = (seconds < 2) ? "second" : "seconds"
+      formatted_time += "#{seconds} #{tag} "
+    end
+      
+    formatted_time    
+  end
+  
 end
