@@ -1,0 +1,126 @@
+  def duration(timenow, )
+    secs  = timenow.to_i
+    mins  = secs / 60
+    hours = mins / 60
+    days  = hours / 24
+
+    
+
+    if days > 0
+      "#{days} days and #{hours % 24} hours"
+    elsif hours > 0
+      "#{hours} hours and #{mins % 60} minutes"
+    elsif mins > 0
+      "#{mins} minutes and #{secs % 60} seconds"
+    elsif secs >= 0
+      "#{secs} seconds"
+    end
+end
+
+def day_difference(start_date, end_date)
+    end_date = Time.now if end_date == 'PRESENT_DAY'
+    puts "END Date = #{end_date}"
+    difference = (end_date - start_date).to_i
+    puts "difference = #{difference}"
+    seconds = difference / 60
+    minutes = seconds / 60
+    hours = minutes / 60
+    days = hours / 24
+    puts "Days : #{days}, Hours : #{hours}, Minutes : #{minutes}, Seconds : #{seconds}"
+    output = ""
+    output += "#{days} days" if days > 0
+    puts "Output1 : #{output}"
+    output += "#{hours % 24} hours" if hours > 0
+    puts "Output2 : #{output}"
+    output += "#{minutes % 60} minutes" if minutes > 0
+    puts "Output3 : #{output}"
+    output += "#{seconds % 60} seconds" if seconds > 0
+    puts "Output4 : #{output}"
+
+    puts output    
+end
+
+
+
+
+
+
+def self.day_difference(start_date, PRESENT_DAY)
+def self.day_difference(start_date, PRESENT_DAY)
+
+def time_difference(start_date, end_time, '') // CompleteDateTime
+def time_difference(start_date, end_time, 'ONLY_DAY')
+def time_difference(start_date, end_time, 'ONLY_HOURS')
+
+
+
+
+//def time_difference(start_date, end_time, 'ONLY_MINUTES')
+//def time_difference(start_date, end_time, 'ONLY_SECONDS')
+
+def day_difference(start_date, end_date)
+    end_date = Time.now if end_date == 'PRESENT_DAY'
+    puts "END Date = #{end_date}"
+    difference = (end_date - start_date).to_i
+    puts "difference = #{difference}"
+    days = 0
+    hours = difference/3600
+    minutes = (difference/60)%60
+    seconds = difference%60
+    puts "Days : #{days}, Hours : #{hours}, Minutes : #{minutes}, Seconds : #{seconds}"
+    output = ""
+    output += "#{days} days" if days > 0
+    puts "Output1 : #{output}"
+    output += "#{hours % 24} hours" if hours > 0
+    puts "Output2 : #{output}"
+    output += "#{minutes % 60} minutes" if minutes > 0
+    puts "Output3 : #{output}"
+    output += "#{seconds % 60} seconds" if seconds > 0
+    puts "Output4 : #{output}"
+    puts output    
+end
+
+
+      rest, secs = self.divmod( 60 )
+      rest, mins = rest.divmod( 60 )
+      days, hours = rest.divmod( 24 )
+      [days, hours, mins, secs]
+
+require 'time'
+def day_difference(start_date, end_date)
+    end_date = Time.now if end_date == 'PRESENT_DAY'
+    time_difference_in_second = (end_date - start_date).to_i
+    rest, seconds = time_difference_in_second.divmod( 60 )
+    rest, minutes = rest.divmod( 60 )
+    days, hours = rest.divmod( 24 )    
+    output = ""
+    output += "#{days} days" if days > 0
+    output += "#{hours} hours" if hours > 0
+    output += "#{minutes} minutes" if minutes > 0
+    output += "#{seconds} seconds" if seconds > 0
+    puts output    
+end
+
+
+require 'date_format'
+start_date = Time.parse('2014-05-25 18:37:11')
+DateFormat.time_difference(start_date, "PRESENT_DAY", "DAY_ONLY")
+DateFormat.time_difference(start_date, "PRESENT_DAY", "HOUR_ONLY")
+DateFormat.time_difference(start_date, "PRESENT_DAY", "MINUTE_ONLY")
+DateFormat.time_difference(start_date, "PRESENT_DAY", "SECOND_ONLY")
+DateFormat.time_difference(start_date, "", "DAY_ONLY")
+DateFormat.time_difference(start_date, "", "HOUR_ONLY")
+DateFormat.time_difference(start_date, "", "MINUTE_ONLY")
+DateFormat.time_difference(start_date, "", "SECOND_ONLY")
+DateFormat.time_difference(start_date, "AA", "DAY_ONLY")
+DateFormat.time_difference(start_date, "AA", "HOUR_ONLY")
+DateFormat.time_difference(start_date, "XX", "MINUTE_ONLY")
+DateFormat.time_difference(start_date, "DD", "SECOND_ONLY")
+
+2.0.0-p353 :002 > start_date = Time.parse('2014-05-25 18:37:11')
+ => 2014-05-25 18:37:11 +0530 
+2.0.0-p353 :003 > puts DateFormat.day_difference(start_date, "PRESENT_DAY")
+
+
+# FORMAT => DAY_ONLY, HOUR_ONLY, MINUTE_ONLY, SECOND_ONLY
+  def time_difference(start_date, end_date, format_type)

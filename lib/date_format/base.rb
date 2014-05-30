@@ -47,6 +47,56 @@ module DateFormat
     end
   end
   
+  # FORMAT => DAY_ONLY, HOUR_ONLY, MINUTE_ONLY, SECOND_ONLY
+  def self.time_difference(start_date, end_date, format_type)
+    begin
+      begin
+        end_date = Time.now if end_date == 'PRESENT_DAY' || end_date == ''
+        time_difference_in_second = (end_date - start_date).to_i
+      rescue
+        time_difference_in_second = (Time.now - start_date).to_i
+      end
+
+      rest, seconds = time_difference_in_second.divmod( 60 )
+      rest, minutes = rest.divmod( 60 )
+      days, hours = rest.divmod( 24 )
+
+      choose_time_difference_format(time_difference_in_second, days, hours, minutes, seconds, format_type)
+    rescue
+      "DATE - Wrong Format"
+    end
+      
+  end
+  
+  def self.choose_time_difference_format(time_difference_in_second, days, hours, minutes, seconds, format_type)
+    case format_type      
+      
+      when "DAY_ONLY"
+        "#{days} Days"
+      
+      when "HOUR_ONLY"
+        begin
+          only_hours = (time_difference_in_second/3600).round(2)
+        rescue
+          only_hours = (time_difference_in_second/3600)
+        end
+        "#{only_hours} Hrs"
+        
+      when "MINUTE_ONLY"
+        begin
+          only_minutes = (time_difference_in_second/60).round(2)
+        rescue
+          only_minutes = (time_difference_in_second/60)
+        end
+        "#{only_minutes} Mins"
+        
+      when "SECOND_ONLY"
+        "#{time_difference_in_second} Seconds"
+      else
+       "#{days} Days, #{hours} Hours #{minutes} Minutes #{seconds} Seconds" 
+    end
+  end
+  
   
   def self.day_difference(start_date, end_date)
     formatted_time = ""  
