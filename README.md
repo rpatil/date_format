@@ -41,6 +41,22 @@ Try this snippet of code on ruby irb
     puts DateFormat.change_to(today_time, "")
     puts DateFormat.change_to("", "")
 
+    # For Time Difference
+    start_date = Time.parse('2014-05-25 18:37:11')
+    DateFormat.time_difference(start_date, "PRESENT_DAY", "DAY_ONLY")
+    DateFormat.time_difference(start_date, "PRESENT_DAY", "HOUR_ONLY")
+    DateFormat.time_difference(start_date, "PRESENT_DAY", "MINUTE_ONLY")
+    DateFormat.time_difference(start_date, "PRESENT_DAY", "SECOND_ONLY")
+    DateFormat.time_difference(start_date, "", "DAY_ONLY")
+    DateFormat.time_difference(start_date, "", "HOUR_ONLY")
+    DateFormat.time_difference(start_date, "", "MINUTE_ONLY")
+    DateFormat.time_difference(start_date, "", "SECOND_ONLY")
+    DateFormat.time_difference(start_date, "AA", "HOUR_ONLY")
+    DateFormat.time_difference(start_date, "XX", "MINUTE_ONLY")
+    DateFormat.time_difference(start_date, "DD", "SECOND_ONLY")
+
+
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/date_format/fork )
