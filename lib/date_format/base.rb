@@ -42,6 +42,14 @@ module DateFormat
         "%H:%M"
       when "MINUTE_IN_HOUR"                             # => 34 Minute
         "%M"
+      when "LONG_DATE_SHORT"                            # => Sat, April 3, 2014***
+        "%a, %B %d, %Y"
+      when "ONLY_DATE"                                  # => April 3, 2014***
+        "%B %d, %Y"
+      when "ONLY_DATE_SHORT"                            # => Apr 3, 2014***
+        "%b %d, %Y"
+      when "ONLY_DATE_DEFAULT"                          # => 3/4/2014 ***
+        "%d/%m/%Y"
       else
         "%d.%m.%y"
     end

@@ -1,4 +1,5 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 # Specify your gem's dependencies in date_format.gemspec
-gemspec
+#gemspec
+gem 'rubygems-update'
