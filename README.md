@@ -22,13 +22,11 @@ Try this snippet of code on ruby irb
 
     require 'date_format'
     today_time = Time.now
-    require 'date_format'
-    today_time = Time.now
     puts DateFormat.change_to(today_time, "GENERAL_DATE")               # => 10/11/14 05:12:26 PM
     puts DateFormat.change_to(today_time, "LONG_DATE")                  # => Saturday, October 11, 2014
     puts DateFormat.change_to(today_time, "ISO_8601_FORMAT")            # => 2014-10-11
     puts DateFormat.change_to(today_time, "MEDIUM_DATE")                # => 11-Oct-2014
-    puts DateFormat.change_to(today_time, "SHORT_DATE")                 # => 10/11/14
+    puts DateFormat.change_to(today_time, "SHORT_DATE")                 # => 10/11/14 (mm/dd/yy)
     puts DateFormat.change_to(today_time, "LONG_TIME")                  # => 05:12:26 PM
     puts DateFormat.change_to(today_time, "MEDIUM_TIME")                # => 17:12 PM
     puts DateFormat.change_to(today_time, "SHORT_TIME")                 # => 17:12
@@ -40,7 +38,7 @@ Try this snippet of code on ruby irb
     puts DateFormat.change_to(today_time, "MINUTE_IN_HOUR")             # => 12
     puts DateFormat.change_to(today_time, "ONLY_DATE")                  # => October 11, 2014
     puts DateFormat.change_to(today_time, "LONG_DATE_SHORT")            # => Sat, October 11, 2014
-    puts DateFormat.change_to(today_time, "ONLY_DATE_DEFAULT")          # => 11/10/2014
+    puts DateFormat.change_to(today_time, "ONLY_DATE_DEFAULT")          # => 11/10/2014 (dd/mm/yy)
     puts DateFormat.change_to(today_time, "ONLY_DATE_SHORT")            # => Oct 11, 2014
     puts DateFormat.change_to(today_time, "")                           # => 11.10.14
     puts DateFormat.change_to("", "")                                   # => NA
