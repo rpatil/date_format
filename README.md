@@ -1,6 +1,6 @@
 # DateFormat
 
-DateFormat is the gem used to access formatted datetime.
+DateFormat is the gem used to access formatted datetime. The library take raw date as input and adds a method to give formatted date. By using same gem, user can find the date difference from start date to end date in different format like seconds, minutes, hours, days, months and years.
 
 ## Installation
 
