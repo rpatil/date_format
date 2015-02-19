@@ -40,6 +40,7 @@ Try this snippet of code on ruby irb
     puts DateFormat.change_to(today_time, "LONG_DATE_SHORT")            # => Sat, October 11, 2014
     puts DateFormat.change_to(today_time, "ONLY_DATE_DEFAULT")          # => 11/10/2014 (dd/mm/yy)
     puts DateFormat.change_to(today_time, "ONLY_DATE_SHORT")            # => Oct 11, 2014
+    puts DateFormat.change_to(today_time, "ONLY_DATE_SHORTEST")         # => Sat, Oct 11, 2014
     puts DateFormat.change_to(today_time, "")                           # => 11.10.14
     puts DateFormat.change_to("", "")                                   # => NA
 

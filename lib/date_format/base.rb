@@ -48,6 +48,8 @@ module DateFormat
         "%B %d, %Y"
       when "ONLY_DATE_SHORT"                            # => Apr 3, 2014***
         "%b %d, %Y"
+      when "ONLY_DATE_SHORTEST"                         # => Sat, Apr 3, 2014***
+        "%a, %b %d, %Y"
       when "ONLY_DATE_DEFAULT"                          # => 3/4/2014 ***
         "%d/%m/%Y"
       else
