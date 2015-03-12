@@ -52,6 +52,16 @@ module DateFormat
         "%a, %b %d, %Y"
       when "ONLY_DATE_DEFAULT"                          # => 3/4/2014 ***
         "%d/%m/%Y"
+      when "ONLY_CURRENT_DATE_NUMBER"                   # => 3 ***
+        "%d"
+      when "ONLY_CURRENT_DATE_ALPHABET"                 # => Sat ***
+        "%a"
+      when "ONLY_CURRENT_MONTH_NUMBER"                  # => 4 ***
+        "%m"
+      when "ONLY_CURRENT_MONTH_ALPHABET"                # => Apr ***
+        "%b"
+      when "ONLY_CURRENT_YEAR_MONTH"                    # => 201404 ***
+        "%Y%m"
       else
         "%d.%m.%y"
     end

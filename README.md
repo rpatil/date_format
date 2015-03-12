@@ -22,28 +22,33 @@ Try this snippet of code on ruby irb
 
     require 'date_format'
     today_time = Time.now
-    puts DateFormat.change_to(today_time, "GENERAL_DATE")               # => 10/11/14 05:12:26 PM
-    puts DateFormat.change_to(today_time, "LONG_DATE")                  # => Saturday, October 11, 2014
-    puts DateFormat.change_to(today_time, "ISO_8601_FORMAT")            # => 2014-10-11
-    puts DateFormat.change_to(today_time, "MEDIUM_DATE")                # => 11-Oct-2014
-    puts DateFormat.change_to(today_time, "SHORT_DATE")                 # => 10/11/14 (mm/dd/yy)
-    puts DateFormat.change_to(today_time, "LONG_TIME")                  # => 05:12:26 PM
-    puts DateFormat.change_to(today_time, "MEDIUM_TIME")                # => 17:12 PM
-    puts DateFormat.change_to(today_time, "SHORT_TIME")                 # => 17:12
-    puts DateFormat.change_to(today_time, "WEEK_OF_YEAR")               # => 40
-    puts DateFormat.change_to(today_time, "DAY_IN_MONTH")               # => 11
-    puts DateFormat.change_to(today_time, "JULIAN_DAY")                 # => 2014
-    puts DateFormat.change_to(today_time, "ONLY_HOUR_IN_24HOUR_FORMAT") # => 17
-    puts DateFormat.change_to(today_time, "HOURS_IN_24HOUR_FORMAT")     # => 17:12
-    puts DateFormat.change_to(today_time, "MINUTE_IN_HOUR")             # => 12
-    puts DateFormat.change_to(today_time, "ONLY_DATE")                  # => October 11, 2014
-    puts DateFormat.change_to(today_time, "LONG_DATE_SHORT")            # => Sat, October 11, 2014
-    puts DateFormat.change_to(today_time, "ONLY_DATE_DEFAULT")          # => 11/10/2014 (dd/mm/yy)
-    puts DateFormat.change_to(today_time, "ONLY_DATE_SHORT")            # => Oct 11, 2014
-    puts DateFormat.change_to(today_time, "ONLY_DATE_SHORTEST")         # => Sat, Oct 11, 2014
-    puts DateFormat.change_to(today_time, "")                           # => 11.10.14
-    puts DateFormat.change_to("", "")                                   # => NA
-
+    puts DateFormat.change_to(today_time, "GENERAL_DATE")                       # => 10/11/14 05:12:26 PM
+    puts DateFormat.change_to(today_time, "LONG_DATE")                          # => Saturday, October 11, 2014
+    puts DateFormat.change_to(today_time, "ISO_8601_FORMAT")                    # => 2014-10-11
+    puts DateFormat.change_to(today_time, "MEDIUM_DATE")                        # => 11-Oct-2014
+    puts DateFormat.change_to(today_time, "SHORT_DATE")                         # => 10/11/14 (mm/dd/yy)
+    puts DateFormat.change_to(today_time, "LONG_TIME")                          # => 05:12:26 PM
+    puts DateFormat.change_to(today_time, "MEDIUM_TIME")                        # => 17:12 PM
+    puts DateFormat.change_to(today_time, "SHORT_TIME")                         # => 17:12
+    puts DateFormat.change_to(today_time, "WEEK_OF_YEAR")                       # => 40
+    puts DateFormat.change_to(today_time, "DAY_IN_MONTH")                       # => 11
+    puts DateFormat.change_to(today_time, "JULIAN_DAY")                         # => 2014
+    puts DateFormat.change_to(today_time, "ONLY_HOUR_IN_24HOUR_FORMAT")         # => 17
+    puts DateFormat.change_to(today_time, "HOURS_IN_24HOUR_FORMAT")             # => 17:12
+    puts DateFormat.change_to(today_time, "MINUTE_IN_HOUR")                     # => 12
+    puts DateFormat.change_to(today_time, "ONLY_DATE")                          # => October 11, 2014
+    puts DateFormat.change_to(today_time, "LONG_DATE_SHORT")                    # => Sat, October 11, 2014
+    puts DateFormat.change_to(today_time, "ONLY_DATE_DEFAULT")                  # => 11/10/2014 (dd/mm/yy)
+    puts DateFormat.change_to(today_time, "ONLY_DATE_SHORT")                    # => Oct 11, 2014
+    puts DateFormat.change_to(today_time, "ONLY_DATE_SHORTEST")                 # => Sat, Oct 11, 2014
+    puts DateFormat.change_to(today_time, "")                                   # => 11.10.14
+    puts DateFormat.change_to(today_time, "ONLY_CURRENT_DATE_NUMBER")           # => 11
+    puts DateFormat.change_to(today_time, "ONLY_CURRENT_DATE_ALPHABET")         # => Sat
+    puts DateFormat.change_to(today_time, "ONLY_CURRENT_MONTH_NUMBER")          # => 10
+    puts DateFormat.change_to(today_time, "ONLY_CURRENT_MONTH_ALPHABET")        # => Oct
+    puts DateFormat.change_to(today_time, "ONLY_CURRENT_YEAR_MONTH")            # => 201410
+    puts DateFormat.change_to("", "")                                           # => NA
+    
     # For Time Difference
     start_date = Time.parse('2014-05-25 18:37:11')
     DateFormat.time_difference(start_date, "PRESENT_DAY", "DAY_ONLY")
